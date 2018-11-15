@@ -19,6 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// 第一引数のurlの場合、第二引数のモジュールに処理を任せる
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
